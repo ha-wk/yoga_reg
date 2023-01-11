@@ -1,6 +1,10 @@
 package controllers
 
-import "github.com/ha-wk/yoga_reg/apis/middlewares"
+import (
+	//"net/http"
+
+	"github.com/ha-wk/yoga_reg/apis/middlewares"
+)
 
 func (s *Server) initializeRoutes() {
 
@@ -9,4 +13,7 @@ func (s *Server) initializeRoutes() {
 
 	// Login Route
 	s.Router.HandleFunc("/login", middlewares.SetMiddlewareJSON(s.Login)).Methods("POST")
+
+	//payments
+	s.Router.HandleFunc("/pay/{id}", middlewares.SetMiddlewareJSON(s.App)).Methods("PUT")
 }
