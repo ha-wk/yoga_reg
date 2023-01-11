@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"errors"
-	//"fmt"
+	//`"fmt"
 	//"html/template"
 	//"log"
 	"net/http"
@@ -30,7 +30,7 @@ type PageVariables struct {
 */
 func (server *Server) App(w http.ResponseWriter, r *http.Request) {
 
-	/*client := razorpay.NewClient("rzp_test_5peFCjW2bKSA1p", "hcX4msA6b3BkcTbLKrri24yB")
+	/*client := razorpay.NewClient("keyid", "secretkey")
 	data := map[string]interface{}{
 		"amount":   50000, //IN PAISE.../ BY 100
 		"currency": "INR",
